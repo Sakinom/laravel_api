@@ -1698,6 +1698,7 @@ class ComposerStaticInitaa322c53454393ed775cfe4807d54a50
         'Illuminate\\Console\\Events\\ScheduledTaskSkipped' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Events/ScheduledTaskSkipped.php',
         'Illuminate\\Console\\Events\\ScheduledTaskStarting' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Events/ScheduledTaskStarting.php',
         'Illuminate\\Console\\GeneratorCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/GeneratorCommand.php',
+        'Illuminate\\Console\\MigrationGeneratorCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/MigrationGeneratorCommand.php',
         'Illuminate\\Console\\OutputStyle' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/OutputStyle.php',
         'Illuminate\\Console\\Parser' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Parser.php',
         'Illuminate\\Console\\QuestionHelper' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/QuestionHelper.php',
