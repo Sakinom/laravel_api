@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => 'v10.2.6',
-        'version' => '10.2.6.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'a44466e771e086d5750b6731250c2142e6093c80',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -371,9 +371,9 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => 'v10.2.6',
-            'version' => '10.2.6.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'a44466e771e086d5750b6731250c2142e6093c80',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -556,6 +556,15 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+        'nunomaduro/larastan' => array(
+            'pretty_version' => 'v2.6.4',
+            'version' => '2.6.4.0',
+            'reference' => '6c5e8820f3db6397546f3ce48520af9d312aed27',
+            'type' => 'phpstan-extension',
+            'install_path' => __DIR__ . '/../nunomaduro/larastan',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
         'nunomaduro/termwind' => array(
             'pretty_version' => 'v1.15.1',
             'version' => '1.15.1.0',
@@ -583,6 +592,15 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+        'phpmyadmin/sql-parser' => array(
+            'pretty_version' => '5.8.2',
+            'version' => '5.8.2.0',
+            'reference' => 'f1720ae19abe6294cb5599594a8a57bc3c8cc287',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpmyadmin/sql-parser',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
         'phpoption/phpoption' => array(
             'pretty_version' => '1.9.1',
             'version' => '1.9.1.0',
@@ -591,6 +609,15 @@
             'install_path' => __DIR__ . '/../phpoption/phpoption',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'phpstan/phpstan' => array(
+            'pretty_version' => '1.10.37',
+            'version' => '1.10.37.0',
+            'reference' => '058ba07e92f744d4dcf6061ae75283d0c6456f2e',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpstan/phpstan',
+            'aliases' => array(),
+            'dev_requirement' => true,
         ),
         'phpunit/php-code-coverage' => array(
             'pretty_version' => '10.1.6',
@@ -748,8 +775,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '3.0.0',
+                0 => '3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache' => array(
