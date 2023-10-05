@@ -15,7 +15,7 @@ class TaskResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id' => $this->id,
+            'id' => $this->i,
             'name' => $this->name,
             'is_completed' => (bool)$this->is_completed
         ];
