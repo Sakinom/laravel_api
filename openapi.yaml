@@ -1,0 +1,129 @@
+openapi: "3.0.3"
+
+info:
+  title: "Task API"
+  version: "1.0.0"
+
+tags:
+  - name: "tasks"
+    description: "タスクの操作"
+
+paths:
+  "/api/v1/tasks":
+    get:
+      summary: "タスク一覧の取得"
+      tags: ["tasks"]
+      deprecated: false
+      responses:
+        "200":
+          description: "成功"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Task"
+    post:
+      summary: "タスクの新規追加"
+      tags: ["tasks"]
+      deprecated: false
+      requestBody:
+        description: "タスク内容"
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name: { type: string, example: "タスク" }
+      responses:
+        "201":
+          description: "成功"
+        "400":
+          description: "Client side error"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+                  errors:
+                    type: object
+                    properties:
+                      name:
+                        type: array
+                        items:
+                          type: string
+  "/api/v1/tasks/{taskId}":
+    get:
+      summary: "タスクの取得"
+      tags: ["tasks"]
+      deprecated: false
+      parameters:
+        - $ref: "#/components/parameters/TaskId"
+      responses:
+        "200":
+          description: "成功"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Task"
+    put:
+      summary: "タスクの更新"
+      tags: ["tasks"]
+      deprecated: false
+      parameters:
+        - $ref: "#/components/parameters/TaskId"
+        - name: name
+          in: header
+          required: true
+          schema: { type: string }
+          example: "update"
+      responses:
+        "200":
+          description: "成功"
+    delete:
+      summary: "タスクの削除"
+      tags: ["tasks"]
+      deprecated: false
+      parameters:
+        - $ref: "#/components/parameters/TaskId"
+      responses:
+        "204":
+          description: "成功"
+  "/api/v1/tasks/{taskId}/complete":
+    patch:
+      summary: "タスクの一部置換"
+      tags: ["tasks"]
+      deprecated: false
+      parameters:
+        - $ref: "#/components/parameters/TaskId"
+        - name: is_completed
+          in: header
+          required: true
+          schema: { type: boolean }
+          example: true
+      responses:
+        "200":
+          description: "成功"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Task"
+components:
+  schemas:
+    Task:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: number, example: 1 }
+              name: { type: string, example: user }
+              is_completed: { type: boolean, example: true }
+  parameters:
+    TaskId:
+      name: id
+      in: path
+      required: true
+      schema: { type: string }
